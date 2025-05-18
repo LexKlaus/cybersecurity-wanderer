@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CyberSecurity Wanderer</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0d1117;
+      color: #c9d1d9;
+    }
+    nav {
+      background-color: #161b22;
+      position: sticky;
+      top: 0;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+    }
+    nav a {
+      color: #58a6ff;
+      text-decoration: none;
+      margin: 0 1rem;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .section {
+      padding: 4rem 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+    .lang-toggle {
+      cursor: pointer;
+      border: 1px solid #58a6ff;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+    }
+    h2 {
+      border-bottom: 1px solid #30363d;
+      padding-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="lang-toggle" onclick="toggleLang()">中文</div>
+  </nav>
+
+  <div class="section" id="home">
+    <h2 data-en="Welcome to CyberSecurity Wanderer" data-zh="歡迎來到 CyberSecurity Wanderer">Welcome to CyberSecurity Wanderer</h2>
+    <p data-en="Freelance cybersecurity services tailored to your needs." data-zh="提供專屬於您的資安自由職業服務。">
+      Freelance cybersecurity services tailored to your needs.
+    </p>
+  </div>
+
+  <div class="section" id="about">
+    <h2 data-en="About Me" data-zh="關於我">About Me</h2>
+    <p data-en="I'm Lex, a cybersecurity specialist with a passion for digital nomad life and ethical hacking."
+       data-zh="我是 Lex，一位熱衷於數位遊牧與道德駭客的資安專家。">
+      I'm Lex, a cybersecurity specialist with a passion for digital nomad life and ethical hacking.
+    </p>
+  </div>
+
+  <div class="section" id="services">
+    <h2 data-en="Services" data-zh="服務項目">Services</h2>
+    <ul>
+      <li data-en="Penetration Testing (Internal & External)" data-zh="滲透測試（內部與外部）">Penetration Testing (Internal & External)</li>
+      <li data-en="Vulnerability Assessment" data-zh="弱點評估">Vulnerability Assessment</li>
+      <li data-en="Security & Compliance Audit" data-zh="安全與合規稽核">Security & Compliance Audit</li>
+      <li data-en="Business Process Automation" data-zh="業務流程自動化">Business Process Automation</li>
+    </ul>
+  </div>
+
+  <div class="section" id="contact">
+    <h2 data-en="Contact Me" data-zh="聯絡我">Contact Me</h2>
+    <p data-en="Email: luthor47@gmail.com" data-zh="電子郵件：luthor47@gmail.com">Email: luthor47@gmail.com</p>
+    <p data-en="LinkedIn: huang-yen-chan-a3937020" data-zh="LinkedIn：huang-yen-chan-a3937020">LinkedIn: huang-yen-chan-a3937020</p>
+  </div>
+
+  <script>
+    function toggleLang() {
+      const toggle = document.querySelector(".lang-toggle");
+      const isEN = toggle.textContent === "中文";
+      toggle.textContent = isEN ? "EN" : "中文";
+
+      document.querySelectorAll("[data-en]").forEach(el => {
+        el.textContent = isEN ? el.getAttribute("data-zh") : el.getAttribute("data-en");
+      });
+    }
+  </script>
+</body>
+</html>
