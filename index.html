@@ -1,107 +1,278 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="CyberSecurity Wanderer - Freelance cybersecurity services by Lex. Penetration testing, audits, automation. Available in English and Chinese." />
-  <meta name="keywords" content="Cybersecurity, Freelance, Penetration Testing, Security Audit, Taiwan, Digital Nomad, 中文資安, 自由工作者" />
-  <meta name="author" content="Lex" />
-  <meta name="google-site-verification" content="UnBzrnqpNxX4-M_w7KAr09AtGfR5c8rvgbBefB6ps4s" />
-  <title>CyberSecurity Wanderer</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #0d1117;
-      color: #c9d1d9;
-    }
-    nav {
-      background-color: #161b22;
-      position: sticky;
-      top: 0;
-      padding: 1rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      z-index: 1000;
-    }
-    nav a {
-      color: #58a6ff;
-      text-decoration: none;
-      margin: 0 1rem;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    .section {
-      padding: 4rem 2rem;
-      max-width: 800px;
-      margin: auto;
-    }
-    .lang-toggle {
-      cursor: pointer;
-      border: 1px solid #58a6ff;
-      padding: 0.5rem 1rem;
-      border-radius: 5px;
-    }
-    h2 {
-      border-bottom: 1px solid #30363d;
-      padding-bottom: 0.5rem;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-key="pageTitle">Cybersecurity Freelancer</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Inter from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9fa; /* Light gray background */
+            color: #343a40; /* Dark gray text */
+        }
+        /* Custom styles for section separators or subtle effects */
+        .section-separator {
+            width: 80px;
+            height: 4px;
+            background-color: #4CAF50; /* A green accent */
+            margin: 20px auto 40px auto;
+            border-radius: 9999px;
+        }
+    </style>
 </head>
-<body>
-  <nav>
-    <div>
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#contact">Contact</a>
-    </div>
-    <div class="lang-toggle" onclick="toggleLang()">中文</div>
-  </nav>
+<body class="antialiased">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md p-4 sticky top-0 z-50 rounded-b-lg">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <div class="text-2xl font-bold text-gray-800">
+                <a href="#" class="hover:text-green-600 transition-colors duration-300" data-key="companyName">CyberSecure Solutions</a>
+            </div>
+            <div class="flex items-center space-x-6">
+                <div class="hidden md:flex space-x-6">
+                    <a href="#home" class="text-gray-600 hover:text-green-600 transition-colors duration-300 font-medium px-3 py-2 rounded-md" data-key="navHome">Home</a>
+                    <a href="#services" class="text-gray-600 hover:text-green-600 transition-colors duration-300 font-medium px-3 py-2 rounded-md" data-key="navServices">Services</a>
+                    <a href="#about" class="text-gray-600 hover:text-green-600 transition-colors duration-300 font-medium px-3 py-2 rounded-md" data-key="navAbout">About</a>
+                    <a href="#contact" class="text-gray-600 hover:text-green-600 transition-colors duration-300 font-medium px-3 py-2 rounded-md" data-key="navContact">Contact</a>
+                </div>
+                <!-- Language Switcher Desktop -->
+                <div class="hidden md:flex space-x-2 ml-4">
+                    <button id="lang-en-desktop" class="text-gray-600 hover:text-green-600 font-medium px-3 py-1 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500 transition-all duration-200">EN</button>
+                    <button id="lang-zh-desktop" class="text-gray-600 hover:text-green-600 font-medium px-3 py-1 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500 transition-all duration-200">ZH</button>
+                </div>
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-800 focus:outline-none ml-4">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white px-2 pt-2 pb-3 space-y-1">
+            <a href="#home" class="block text-gray-600 hover:text-green-600 transition-colors duration-300 font-medium px-3 py-2 rounded-md" data-key="navHome">Home</a>
+            <a href="#services" class="block text-gray-600 hover:text-green-600 transition-colors duration-300 font-medium px-3 py-2 rounded-md" data-key="navServices">Services</a>
+            <a href="#about" class="block text-gray-600 hover:text-green-600 transition-colors duration-300 font-medium px-3 py-2 rounded-md" data-key="navAbout">About</a>
+            <a href="#contact" class="block text-gray-600 hover:text-green-600 transition-colors duration-300 font-medium px-3 py-2 rounded-md" data-key="navContact">Contact</a>
+            <!-- Language Switcher Mobile -->
+            <div class="flex justify-center space-x-2 mt-4 pt-2 border-t border-gray-200">
+                <button id="lang-en-mobile" class="text-gray-600 hover:text-green-600 font-medium px-3 py-1 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500 transition-all duration-200">EN</button>
+                <button id="lang-zh-mobile" class="text-gray-600 hover:text-green-600 font-medium px-3 py-1 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500 transition-all duration-200">ZH</button>
+            </div>
+        </div>
+    </nav>
 
-  <div class="section" id="home">
-    <h2 data-en="Welcome to CyberSecurity Wanderer" data-zh="歡迎來到 CyberSecurity Wanderer">Welcome to CyberSecurity Wanderer</h2>
-    <p data-en="Freelance cybersecurity services tailored to your needs." data-zh="提供專屬於您的資安自由職業服務。">
-      Freelance cybersecurity services tailored to your needs.
-    </p>
-  </div>
+    <!-- Hero Section -->
+    <section id="home" class="relative bg-gradient-to-r from-gray-800 to-gray-900 text-white py-20 md:py-32 overflow-hidden rounded-b-lg shadow-inner">
+        <div class="container mx-auto text-center px-4">
+            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6 animate-fade-in-down" data-key="heroTitle">
+                Safeguarding Your Digital World
+            </h1>
+            <p class="text-lg md:text-xl mb-10 max-w-2xl mx-auto opacity-90 animate-fade-in-up" data-key="heroSubtitle">
+                Expert cybersecurity solutions tailored for individuals and businesses. Protect your assets from evolving threats.
+            </p>
+            <a href="#contact" class="inline-block bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-8 rounded-full text-lg shadow-lg transform hover:scale-105 transition-all duration-300" data-key="heroCta">
+                Get a Free Consultation
+            </a>
+        </div>
+        <!-- Background elements for visual interest, mimicking a tech feel -->
+        <div class="absolute inset-0 z-0 opacity-10">
+            <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice" fill="currentColor">
+                <defs>
+                    <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
+                        <path d="M 10 0 L 0 0 L 0 10" fill="none" stroke="currentColor" stroke-width="0.1"></path>
+                    </pattern>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#grid)"></rect>
+            </svg>
+        </div>
+    </section>
 
-  <div class="section" id="about">
-    <h2 data-en="About Me" data-zh="關於我">About Me</h2>
-    <p data-en="I'm Lex, a cybersecurity specialist with a passion for digital nomad life and ethical hacking."
-       data-zh="我是 Lex，一位熱衷於數位遊牧與道德駭客的資安專家。">
-      I'm Lex, a cybersecurity specialist with a passion for digital nomad life and ethical hacking.
-    </p>
-  </div>
+    <!-- Services Section -->
+    <section id="services" class="py-16 md:py-24 bg-white rounded-lg shadow-md mt-8 mx-auto max-w-6xl px-4">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-800" data-key="servicesTitle">Our Services</h2>
+            <div class="section-separator"></div>
+            <p class="text-lg text-gray-600 mb-12 max-w-3xl mx-auto" data-key="servicesSubtitle">
+                Comprehensive cybersecurity solutions designed to protect your digital presence.
+            </p>
 
-  <div class="section" id="services">
-    <h2 data-en="Services" data-zh="服務項目">Services</h2>
-    <ul>
-      <li data-en="Penetration Testing (Internal & External)" data-zh="滲透測試（內部與外部）">Penetration Testing (Internal & External)</li>
-      <li data-en="Vulnerability Assessment" data-zh="弱點評估">Vulnerability Assessment</li>
-      <li data-en="Security & Compliance Audit" data-zh="安全與合規稽核">Security & Compliance Audit</li>
-      <li data-en="Business Process Automation" data-zh="業務流程自動化">Business Process Automation</li>
-    </ul>
-  </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service Card 1 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-lg border border-gray-200 hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1">
+                    <div class="text-green-500 mb-4">
+                        <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.01 12.01 0 002.92 12c0 3.072 1.87 5.766 4.563 7.153l.36.18c.27.134.567.243.874.326A10.012 10.012 0 0012 21.077a10.012 10.012 0 003.283-.548 10.02 10.02 0 00.874-.326l.36-.18c2.693-1.387 4.563-4.081 4.563-7.153a12.01 12.01 0 00-.92-4.992z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800" data-key="service1Title">Vulnerability Assessment</h3>
+                    <p class="text-gray-600" data-key="service1Desc">
+                        Identify and assess weaknesses in your systems, networks, and applications to prevent potential breaches.
+                    </p>
+                </div>
+                <!-- Service Card 2 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-lg border border-gray-200 hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1">
+                    <div class="text-green-500 mb-4">
+                        <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 0 012 2v5a2 2 0 01-2 2H9a2 2 0 01-2-2V9a2 2 0 012-2h6z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 14v-2m4 0v2m4-2v2"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800" data-key="service2Title">Penetration Testing</h3>
+                    <p class="text-gray-600" data-key="service2Desc">
+                        Simulate cyberattacks to find exploitable vulnerabilities before malicious actors do.
+                    </p>
+                </div>
+                <!-- Service Card 3 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-lg border border-gray-200 hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1">
+                    <div class="text-green-500 mb-4">
+                        <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 21h7a2 2 0 002-2V9a2 2 0 00-2-2h-7a2 2 0 00-2 2v5m0 6l-3-3m0 0l3-3m-3 3h8m-7-9v5"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800" data-key="service3Title">Security Consulting</h3>
+                    <p class="text-gray-600" data-key="service3Desc">
+                        Provide expert advice and strategies to build a robust security posture for your organization.
+                    </p>
+                </div>
+                <!-- Service Card 4 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-lg border border-gray-200 hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1">
+                    <div class="text-green-500 mb-4">
+                        <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800" data-key="service4Title">Incident Response</h3>
+                    <p class="text-gray-600" data-key="service4Desc">
+                        Develop and implement plans to effectively respond to and recover from security breaches.
+                    </p>
+                </div>
+                <!-- Service Card 5 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-lg border border-gray-200 hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1">
+                    <div class="text-green-500 mb-4">
+                        <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800" data-key="service5Title">Security Awareness Training</h3>
+                    <p class="text-gray-600" data-key="service5Desc">
+                        Educate your employees on best practices to identify and avoid common cyber threats.
+                    </p>
+                </div>
+                <!-- Service Card 6 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-lg border border-gray-200 hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1">
+                    <div class="text-green-500 mb-4">
+                        <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800" data-key="service6Title">Compliance & Audit</h3>
+                    <p class="text-gray-600" data-key="service6Desc">
+                        Ensure your systems and processes meet industry standards and regulatory requirements.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <div class="section" id="contact">
-    <h2 data-en="Contact Me" data-zh="聯絡我">Contact Me</h2>
-    <p data-en="Email: luthor47@gmail.com" data-zh="電子郵件：luthor47@gmail.com">Email: luthor47@gmail.com</p>
-    <p data-en="LinkedIn: huang-yen-chan-a3937020" data-zh="LinkedIn：huang-yen-chan-a3937020">LinkedIn: huang-yen-chan-a3937020</p>
-  </div>
+    <!-- About Section -->
+    <section id="about" class="py-16 md:py-24 bg-white rounded-lg shadow-md mt-8 mx-auto max-w-6xl px-4">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-800" data-key="aboutTitle">About Me</h2>
+            <div class="section-separator"></div>
+            <div class="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-16">
+                <div class="w-48 h-48 md:w-64 md:h-64 flex-shrink-0 rounded-full overflow-hidden shadow-xl border-4 border-white">
+                    <!-- Placeholder image for the freelancer's photo -->
+                    <img src="https://placehold.co/256x256/000000/FFFFFF?text=Freelancer" alt="Freelancer Photo" class="object-cover w-full h-full">
+                </div>
+                <div class="md:text-left text-center max-w-xl">
+                    <p class="text-lg text-gray-700 mb-4" data-key="aboutP1">
+                        Hello! I'm Huang Yen Chan, a dedicated cybersecurity professional with over three years of intensive experience in cybersecurity. I've also successfully completed ISO and NIST assessments on Upwork.
+                    </p>
+                    <p class="text-lg text-gray-700 mb-4" data-key="aboutP2">
+                        My mission is to provide robust and practical security solutions that empower you to navigate the digital landscape with confidence. I specialize in identifying vulnerabilities, fortifying defenses, and responding effectively to security incidents.
+                    </p>
+                    <p class="text-lg text-gray-700" data-key="aboutP3">
+                        My approach combines technical knowledge with a deep understanding of practical business needs, ensuring that security measures are not just effective but also integrated seamlessly into your operations. I am passionate about staying ahead of emerging threats and committed to continuous learning to offer you the most current and effective protection strategies. Let's work together to build a more secure future for your business.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <script>
-    function toggleLang() {
-      const toggle = document.querySelector(".lang-toggle");
-      const isEN = toggle.textContent === "中文";
-      toggle.textContent = isEN ? "EN" : "中文";
+    <!-- Call to Action / Quote Section -->
+    <section class="bg-green-600 text-white py-16 md:py-20 mt-8 mx-auto max-w-6xl rounded-lg shadow-md px-4">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6" data-key="ctaTitle">Ready to Secure Your Business?</h2>
+            <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto opacity-90" data-key="ctaSubtitle">
+                Don't wait for a breach to happen. Proactive security is your best defense.
+            </p>
+            <a href="#contact" class="inline-block bg-white text-green-700 hover:bg-gray-100 font-semibold py-3 px-8 rounded-full text-lg shadow-lg transform hover:scale-105 transition-all duration-300" data-key="ctaButton">
+                Get a Custom Security Plan
+            </a>
+        </div>
+    </section>
 
-      document.querySelectorAll("[data-en]").forEach(el => {
-        el.textContent = isEN ? el.getAttribute("data-zh") : el.getAttribute("data-en");
-      });
-    }
-  </script>
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 md:py-24 bg-white rounded-lg shadow-md mt-8 mx-auto max-w-6xl px-4">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-800" data-key="contactTitle">Contact Me</h2>
+            <div class="section-separator"></div>
+            <p class="text-lg text-gray-600 mb-12 max-w-3xl mx-auto" data-key="contactSubtitle">
+                Have a question or need a quote? Fill out the form below or reach out directly.
+            </p>
+
+            <div class="max-w-xl mx-auto bg-gray-50 p-8 rounded-lg shadow-xl border border-gray-200">
+                <form action="#" method="POST" class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-left text-sm font-medium text-gray-700 mb-1" data-key="contactNameLabel">Name</label>
+                        <input type="text" id="name" name="name" required
+                               class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-base outline-none transition-all duration-200 focus:shadow-lg">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-left text-sm font-medium text-gray-700 mb-1" data-key="contactEmailLabel">Email</label>
+                        <input type="email" id="email" name="email" required
+                               class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-base outline-none transition-all duration-200 focus:shadow-lg">
+                    </div>
+                    <div>
+                        <label for="subject" class="block text-left text-sm font-medium text-gray-700 mb-1" data-key="contactSubjectLabel">Subject</label>
+                        <input type="text" id="subject" name="subject"
+                               class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-base outline-none transition-all duration-200 focus:shadow-lg">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-left text-sm font-medium text-gray-700 mb-1" data-key="contactMessageLabel">Message</label>
+                        <textarea id="message" name="message" rows="5" required
+                                  class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-base outline-none transition-all duration-200 focus:shadow-lg"></textarea>
+                    </div>
+                    <div>
+                        <button type="submit"
+                                class="w-full inline-flex justify-center py-3 px-6 border border-transparent shadow-sm text-lg font-semibold rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 transition-all duration-300 transform hover:scale-105" data-key="sendMessageButton">
+                            Send Message
+                        </button>
+                    </div>
+                </form>
+                <div class="mt-8 text-center text-gray-600">
+                    <p class="mb-2" data-key="contactOrConnect">Or connect directly:</p>
+                    <p class="text-lg font-medium" data-key="contactEmail">Email: luthor47@gmail.com</p>
+                    <div class="flex justify-center space-x-6 mt-4">
+                        <!-- Social Media Icons (replace with actual links) -->
+                        <a href="#" class="text-gray-500 hover:text-green-600 transition-colors duration-300">
+                            <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.776-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33V22H12c5.523 0 10-4.477 10-10z" clip-rule="evenodd"></path></svg>
+                        </a>
+                        <a href="#" class="text-gray-500 hover:text-green-600 transition-colors duration-300">
+                            <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.001 2.001C6.476 2.001 2 6.477 2 12.001s4.476 10 10.001 10 10-4.475 10-10S17.525 2.001 12.001 2.001zm6.002 4.148c-.28.12-.58.203-.898.232a4.406 4.406 0 001.93-2.73 8.71 8.71 0 01-1.378.529 4.35 4.35 0 00-7.447 3.966 12.396 12.396 0 01-8.918-4.527 4.358 4.358 0 001.348 5.803 4.322 4.322 0 01-1.979-.546v.054a4.356 4.356 0 003.492 4.261 4.347 4.347 0 01-1.968.075 4.364 4.364 0 004.053 3.023 8.73 8.73 0 01-5.416 1.865c-.352 0-.698-.02-.047-.076A12.222 12.222 0 0017.9 6.15z"></path></svg>
+                        </a>
+                        <a href="#" class="text-gray-500 hover:text-green-600 transition-colors duration-300">
+                            <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clip-rule="evenodd"></path></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 mt-8 rounded-t-lg shadow-inner">
+        <div class="container mx-auto text-center px-4">
+            <p class="text-sm md:text-base" data-key="footerCopyright">&copy; 2025 CyberSecure Solutions. All rights reserved.</p>
+            <div class="flex justify-center space-x-4 mt-4">
+                <a href="#privacy" class="text-gray-400 hover:text-white transition-colors duration-300 text-sm" data-key="footerPrivacy">Privacy Policy</a>
+                <a href="#terms" class="text-gray-400 hover:text-white transition-colors duration-300 text-sm" data-key="footerTerms">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Link to external JavaScript file -->
+    <script src="./script.js"></script>
 </body>
 </html>
