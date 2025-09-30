@@ -32,10 +32,10 @@ const translations = {
         experienceSubtitle: "Professional Experience & Assessments", // Updated Sub-heading
         
         // --- UPDATED EXPERIENCE CONTENT ---
-        expItem1Detail1: "Conducted vulnerability research on open-source projects, identifying critical issues such as SSRF, RCE, and unauthenticated GraphQL introspection**, and delivered detailed security reports to clients.",
+        expItem1Detail1: "Conducted vulnerability research on open-source projects, identifying critical issues such as SSRF, RCE, and unauthenticated GraphQL introspection, and delivered detailed security reports to clients.",
         expItem1Detail2: "Performed penetration testing and open-source license compliance checks, providing actionable recommendations to strengthen security posture.",
         expItem1Detail3: "Developed comprehensive risk assessment reports aligned with ISO 27001 and NIST frameworks.",
-        expItem2Detail1: "Applied expertise in *pplication security, vulnerability management, and security testing to enhance client cyber resilience and compliance.",
+        expItem2Detail1: "Applied expertise in application security, vulnerability management, and security testing to enhance client cyber resilience and compliance.",
         // --- END UPDATED EXPERIENCE CONTENT ---
         
         // Project titles remain, removed 'Course' detail from HTML
@@ -269,4 +269,5 @@ document.addEventListener('DOMContentLoaded', () => {
         setLanguage('en'); // Default language if no preference is saved
     }
 });
+
 
