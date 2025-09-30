@@ -29,34 +29,37 @@ const translations = {
         service6Desc: "Ensure your systems and processes meet industry standards and regulatory requirements.",
         expProjectsTitle: "My Experience & Projects", // New section title
         expProjectsSubtitle: "Detailing my expertise in risk assessment, vulnerability management, and hands-on security projects.", // Updated Subtitle
-        experienceSubtitle: "Work Experience & Assessments", // Sub-heading for experience
-        expItem1Title: "ISO 27001 & NIST Risk Assessment (Upwork)",
-        expItem1Date: "Date: [Date]",
-        expItem1Detail1: "Developed comprehensive **risk assessment reports** under established frameworks like **ISO 27001 and NIST** for clients.",
-        expItem1Detail2: "Applied expertise in **information security and compliance** to enhance organizational cyber resilience.",
-        expItem1Detail3: "Focused on custom solutions that **mitigate risks and protect digital assets**.",
-        expItem2Title: "Vulnerability Management & Open Source Security",
-        expItem2Date: "Date: [Date]",
-        expItem2Detail1: "Successfully conducted **security bug research** in open-source projects, identifying critical vulnerabilities.",
-        expItem2Detail2: "Delivered **detailed reports** on security issues and provided actionable remediation steps.",
-        expItem2Detail3: "Performed **Penetration Testing and Open Source License Compliance Checks** for project assurance.",
+        experienceSubtitle: "Professional Experience & Assessments", // Updated Sub-heading
+        
+        // --- UPDATED EXPERIENCE CONTENT ---
+        expItem1Detail1: "Conducted vulnerability research on open-source projects, identifying critical issues such as **SSRF, RCE, and unauthenticated GraphQL introspection**, and delivered detailed security reports to clients.",
+        expItem1Detail2: "Performed **penetration testing and open-source license compliance checks**, providing actionable recommendations to strengthen security posture.",
+        expItem1Detail3: "Developed comprehensive **risk assessment reports aligned with ISO 27001 and NIST frameworks**.",
+        expItem2Detail1: "Applied expertise in **application security, vulnerability management, and security testing** to enhance client cyber resilience and compliance.",
+        // --- END UPDATED EXPERIENCE CONTENT ---
+        
+        // Project titles remain, removed 'Course' detail from HTML
+        expItem2Detail2: "Note: The following projects showcase technical skills but are not client engagements.", // Placeholder to fill the unused data-key for cleaner translation setup
+        expItem2Detail3: "These projects are for demonstration purposes only.", 
+
         projectsSubtitle: "Cybersecurity Projects", // Sub-heading for projects
         project1Title: "Web Application Penetration Testing Simulation",
-        project1Course: "Course Project: [Relevant Course Name]",
         project1Detail1: "Conducted automated vulnerability scanning and analysis using OWASP ZAP.",
         project1Detail2: "Manually performed testing and exploitation of common vulnerabilities (e.g., SQL Injection, XSS).",
         project1Detail3: "Authored penetration testing reports detailing findings, risk levels, and remediation recommendations.",
         project2Title: "Network Security Hardening Lab",
-        project2Course: "Course Project: [Relevant Course Name]",
         project2Detail1: "Built vulnerable network topologies in a virtualized environment.",
         project2Detail2: "Practiced firewall rule configuration, Intrusion Detection System (IDS) deployment, and log analysis.",
         project2Detail3: "Demonstrated how to strengthen network perimeter security against common attacks.",
         viewProject: "View Project &rarr;",
+        
+        // --- UPDATED ABOUT ME CONTENT to match new experience ---
         aboutTitle: "About Me",
-        // The detailed Upwork experience is integrated here
-        aboutP1: "Hello! I'm Huang Yen Chan, an **emerging cybersecurity consultant** with over three years of intensive experience in cybersecurity projects and courses. I demonstrate specialized expertise in **risk assessment and vulnerability management**.",
-        aboutP2: "My mission is to provide robust and practical security solutions. I have successfully conducted **security bug research in open-source projects**, identifying critical vulnerabilities, and delivering detailed reports. I am skilled in application security, security testing, and information security.",
-        aboutP3: "My approach ensures that security measures are not just effective but also integrated seamlessly into your operations. I am committed to continuous learning to offer you the most current and effective protection strategies. Let's work together to build a more secure future for your business.",
+        aboutP1: "Hello! I'm Huang Yen Chan, an emerging cybersecurity consultant demonstrating expertise in **risk assessment and vulnerability management**.",
+        aboutP2: "I have successfully conducted security bug research in open-source projects, identifying critical vulnerabilities and delivering detailed reports, while also developing comprehensive risk assessment reports under established frameworks like ISO 27001 and NIST.",
+        aboutP3: "I am skilled in application security, security testing, and information security, applying these competencies to enhance organizational cyber resilience and compliance. I am focused on custom solutions that mitigate risks and protect digital assets. Let's work together to build a more secure future for your business.",
+        // --- END UPDATED ABOUT ME CONTENT ---
+
         ctaTitle: "Ready to Secure Your Business?",
         ctaSubtitle: "Don't wait for a breach to happen. Proactive security is your best defense.",
         ctaButton: "Get a Custom Security Plan",
@@ -100,37 +103,39 @@ const translations = {
         service6Desc: "確保您的系統和流程符合行業標準和法規要求。",
         expProjectsTitle: "我的經歷與專案", // 新增區塊標題
         expProjectsSubtitle: "詳細說明我在風險評估、弱點管理與實務資安專案方面的專業知識。", // 更新副標題
-        experienceSubtitle: "工作經歷與評估", // 經歷子標題
-        expItem1Title: "ISO 27001 與 NIST 風險評估 (Upwork)",
-        expItem1Date: "項目日期：[日期]",
-        expItem1Detail1: "為客戶執行基於 **ISO 27001 和 NIST** 等既定框架的全面**風險評估報告**。",
-        expItem1Detail2: "運用**資訊安全與合規性**的專業知識，強化組織的網路彈性。",
-        expItem1Detail3: "專注於提供能**減輕風險和保護數位資產**的客製化解決方案。",
-        expItem2Title: "弱點管理與開源專案安全",
-        expItem2Date: "項目日期：[日期]",
-        expItem2Detail1: "成功在開源專案中進行**安全漏洞研究**，識別關鍵弱點。",
-        expItem2Detail2: "提供**詳細的資安問題報告**並提出具體可行的修復步驟。",
-        expItem2Detail3: "執行**滲透測試與開源授權合規性檢查**，確保專案品質。",
+        experienceSubtitle: "專業經歷與評估", // 更新子標題
+        
+        // --- UPDATED EXPERIENCE CONTENT ---
+        expItem1Detail1: "在開源專案中進行**弱點研究**，識別出 **SSRF、RCE 和未經身份驗證的 GraphQL 內省**等關鍵問題，並向客戶交付詳細的安全報告。",
+        expItem1Detail2: "執行**滲透測試與開源授權合規性檢查**，提供可操作的建議以強化安全態勢。",
+        expItem1Detail3: "根據 **ISO 27001 和 NIST 框架**，制定全面的**風險評估報告**。",
+        expItem2Detail1: "應用**應用程式安全、弱點管理和安全測試**的專業知識，增強客戶的網路彈性與合規性。",
+        // --- END UPDATED EXPERIENCE CONTENT ---
+        
+        // Project titles remain, removed 'Course' detail from HTML
+        expItem2Detail2: "注意：以下專案僅展示技術能力，並非客戶委託案件。", // Placeholder to fill the unused data-key for cleaner translation setup
+        expItem2Detail3: "這些專案僅用於示範目的。", 
+        
         projectsSubtitle: "資安專案", // 專案子標題
         project1Title: "網站應用程式滲透測試模擬",
-        project1Course: "課程專案：[相關課程名稱]",
         project1Detail1: "使用 OWASP ZAP 進行自動化弱點掃描與分析。",
         project1Detail2: "手動執行常見弱點（如 SQL 注入、XSS）的測試與利用。",
         project1Detail3: "撰寫滲透測試報告，詳細記錄發現的問題、風險等級與修復建議。",
         project2Title: "網路安全強化實驗室",
-        project2Course: "課程專案：[相關課程名稱]",
         project2Detail1: "在虛擬環境中搭建具弱點的網路拓撲。",
         project2Detail2: "實踐防火牆規則配置、入侵偵測系統 (IDS) 部署與日誌分析。",
         project2Detail3: "展示如何強化網路邊界安全以防禦常見攻擊。",
         viewProject: "查看專案 &rarr;",
+        
+        // --- UPDATED ABOUT ME CONTENT to match new experience ---
         aboutTitle: "關於我",
-        // The detailed Upwork experience is integrated here
-        aboutP1: "您好！我是詹皇彥，一位**新銳的資安顧問**，擁有超過三年的資安課程與專案實務經驗。我在**風險評估與弱點管理**方面展現了專業知識。",
-        aboutP2: "我的使命是提供強大且實用的資安解決方案。我成功在**開源專案中進行安全漏洞研究**，識別了關鍵弱點，並提供了詳細報告。我擅長應用程式安全、安全測試和資訊安全。",
-        aboutP3: "我的方法能確保資安措施不僅有效，而且能無縫整合到您的營運中。我致力於持續學習，為您提供最先進且有效的防護策略。讓我們攜手合作，為您的企業建構一個更安全的未來。",
+        aboutP1: "您好！我是詹皇彥，一位新銳資安顧問，展現出在**風險評估與弱點管理**方面的專業知識。",
+        aboutP2: "我成功在開源專案中進行安全漏洞研究，識別了關鍵弱點並交付了詳細報告，同時也根據 **ISO 27001 和 NIST 框架**制定了全面的風險評估報告。",
+        aboutP3: "我擅長**應用程式安全、弱點管理和安全測試**，並應用這些能力來增強客戶的網路彈性與合規性。我專注於客製化解決方案，以減輕風險並保護數位資產。讓我們攜手合作，為您的企業建構一個更安全的未來。",
+        // --- END UPDATED ABOUT ME CONTENT ---
+
         ctaTitle: "準備好保護您的業務了嗎？",
         ctaSubtitle: "別等到資安事件發生才行動。主動防禦是您最佳的選擇。",
-        ctaButton: "獲取客製化資安計畫",
         contactTitle: "聯絡我們",
         contactSubtitle: "有問題或需要報價嗎？填寫下方表格或直接與我們聯絡。",
         contactNameLabel: "姓名",
