@@ -51,8 +51,9 @@ const translations = {
         project2Detail1: "Built vulnerable network topologies in a virtualized environment.",
         project2Detail2: "Practiced firewall rule configuration, Intrusion Detection System (IDS) deployment, and log analysis.",
         project2Detail3: "Demonstrated how to strengthen network perimeter security against common attacks.",
-        viewProject: "View Project &rarr;",
         
+        // Removed 'viewProject' translation key
+
         // --- UPDATED ABOUT ME CONTENT to match new experience ---
         aboutTitle: "About Me",
         aboutP1: "Hello! I'm Huang Yen Chan, an emerging cybersecurity consultant demonstrating expertise in **risk assessment and vulnerability management**.",
@@ -125,8 +126,9 @@ const translations = {
         project2Detail1: "在虛擬環境中搭建具弱點的網路拓撲。",
         project2Detail2: "實踐防火牆規則配置、入侵偵測系統 (IDS) 部署與日誌分析。",
         project2Detail3: "展示如何強化網路邊界安全以防禦常見攻擊。",
-        viewProject: "查看專案 &rarr;",
         
+        // Removed 'viewProject' translation key
+
         // --- UPDATED ABOUT ME CONTENT to match new experience ---
         aboutTitle: "關於我",
         aboutP1: "您好！我是詹皇彥，一位新銳資安顧問，展現出在**風險評估與弱點管理**方面的專業知識。",
@@ -136,6 +138,7 @@ const translations = {
 
         ctaTitle: "準備好保護您的業務了嗎？",
         ctaSubtitle: "別等到資安事件發生才行動。主動防禦是您最佳的選擇。",
+        ctaButton: "獲取客製化資安計畫",
         contactTitle: "聯絡我們",
         contactSubtitle: "有問題或需要報價嗎？填寫下方表格或直接與我們聯絡。",
         contactNameLabel: "姓名",
